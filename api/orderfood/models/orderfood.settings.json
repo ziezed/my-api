@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "orderfoods",
+  "info": {
+    "name": "orderfood"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "order_id": {
+      "type": "string"
+    },
+    "food_id": {
+      "type": "string"
+    },
+    "jumlah": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "food": {
+      "model": "food",
+      "via": "orderfoods"
+    },
+    "order": {
+      "model": "order",
+      "via": "orderfoods"
+    }
+  }
+}

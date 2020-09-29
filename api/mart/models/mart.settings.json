@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marts",
+  "info": {
+    "name": "mart"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "harga": {
+      "type": "integer"
+    },
+    "jumlah": {
+      "type": "integer"
+    },
+    "keterangan": {
+      "type": "string"
+    }
+  }
+}

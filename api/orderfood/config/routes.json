@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/orderfoods",
+      "handler": "orderfood.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orderfoods/count",
+      "handler": "orderfood.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orderfoods/:id",
+      "handler": "orderfood.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/orderfoods",
+      "handler": "orderfood.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/orderfoods/:id",
+      "handler": "orderfood.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/orderfoods/:id",
+      "handler": "orderfood.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

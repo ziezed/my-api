@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "gurus",
+  "info": {
+    "name": "guru"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "kelamin": {
+      "type": "string"
+    },
+    "keterangan": {
+      "type": "string"
+    },
+    "murids": {
+      "collection": "murid",
+      "via": "guru"
+    },
+    "gambar": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

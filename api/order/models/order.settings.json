@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "orders",
+  "info": {
+    "name": "order"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "customer_id": {
+      "type": "string"
+    },
+    "driver_id": {
+      "type": "string"
+    },
+    "ongkir": {
+      "type": "integer"
+    },
+    "jarak": {
+      "type": "integer"
+    },
+    "tujuan": {
+      "type": "string"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "driver": {
+      "via": "orders",
+      "model": "driver"
+    },
+    "orderfoods": {
+      "via": "order",
+      "collection": "orderfood"
+    },
+    "customer": {
+      "via": "orders",
+      "model": "customer"
+    }
+  }
+}

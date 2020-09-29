@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "foods",
+  "info": {
+    "name": "food"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "harga": {
+      "type": "integer"
+    },
+    "jumlah": {
+      "type": "integer"
+    },
+    "orderfoods": {
+      "via": "food",
+      "collection": "orderfood"
+    }
+  }
+}

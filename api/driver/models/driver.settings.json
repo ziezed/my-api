@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "drivers",
+  "info": {
+    "name": "driver"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user_id": {
+      "type": "string"
+    },
+    "deposit": {
+      "type": "integer"
+    },
+    "keterangan": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "orders": {
+      "collection": "order",
+      "via": "driver"
+    }
+  }
+}
